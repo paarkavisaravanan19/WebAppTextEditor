@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model WebAppTextEditor.Models.EditorModel
+<h2>
+    Design Your Document
+</h2>
+
+<h2 class="border rounded text-center text-white my-3 p-2" style="background-color :#08618d;">Create Article</h2>
+<form method="post">
+    <div class="row-mb-3">
+        <label class="col-sm-4 col-form-label">Content</label>
+        <div class="col-sm-8">
+            <label asp-for="ContentDetails" class="control-label"></label>
+            <textarea id="tiny" name="ContentDetails"></textarea>
+            <span asp-validation-for="ContentDetails" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
